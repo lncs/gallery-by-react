@@ -7,14 +7,14 @@ import ReactDOM from 'react-dom';
 
 
 //获取图片相关数据
-var imageDatas = require('../data/imageDatas1.json');
+var imageDatas = require('../data/imageDatas.json');
 
 // let yeomanImage = require('../images/yeoman.png');
 //利用自执行函数,讲图片名信息转成图片URL路径信息
 function getImageUrl(imageDataArr) {
   for (var i=0; i<imageDataArr.length;i++){
     var singleImageData = imageDataArr[i];
-    singleImageData.imageUrl = require('../images_copy/'+singleImageData.fileName);
+    singleImageData.imageUrl = require('../images/'+singleImageData.fileName);
     imageDataArr[i] = singleImageData;
   }
   return imageDataArr;
